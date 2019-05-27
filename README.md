@@ -6,7 +6,7 @@ TextRank is based on the PageRank algorithm (http://ilpubs.stanford.edu:8090/422
 * In place of web pages, we use sentences from the text documents.
 * Similarity between any two sentences is used as an equivalent to the web page transition probability.
 * The similarity scores are stored in a square matrix, similar to the matrix M used for PageRank.
-And these are the steps to TextRank method:
+#### And these are the steps to TextRank method:
 * The first step would be to concatenate all the text contained in the articles.
 * Then split the text into individual sentences.
 * In the next step, we will find vector representation for each and every sentence.

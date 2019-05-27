@@ -16,7 +16,7 @@ TextRank is based on the PageRank algorithm (http://ilpubs.stanford.edu:8090/422
 ## CoRank Algorithm
 CoRank algorithm is an improvement over the TextRank algorithm. CoRank incorporates word-sentence relationship for ranking the sentences as described in the paper(https://www.researchgate.net/publication/311690538_Word-Sentence_Co-Ranking_for_Automatic_Extractive_Text_Summarization).
 
-# Implementation details
+## Implementation details
 We implement TextRank/CoRank in R and python. We used python NLTK to split the sentences of the text documents. NLTK is a powerful library which handles many special cases to break sentences. Breaking the text document into sentences and after ranking the sentences combining them to generate summary this part is done in python. And rest of the implementation is done in R.
 
 

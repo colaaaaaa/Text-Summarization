@@ -18,6 +18,11 @@ CoRank algorithm is an improvement over the TextRank algorithm. CoRank incorpora
 
 ## Implementation details
 We implement TextRank/CoRank in R and python. We used python NLTK to split the sentences of the text documents. NLTK is a powerful library which handles many special cases to break sentences. Breaking the text document into sentences and after ranking the sentences combining them to generate summary this part is done in python. And rest of the implementation is done in R.
+* First part of the implementation is to break the text document into sentences. For that we used python script(break_sentences.py) present in folder summary_files. This script takes file name as command line arguments then it splits the document into the sentences. These sentences will store in the folder tempdir. Each sentence will store in separate text file.
+* The actual implementation of the algorithm is in R file(CoRank.r). This script read sentences from the folder tempdir and create the corpus of these sentences. This corpus then coverted into word-sentence matrix which further converted into the sentence-sentence matrix (adjacency matrix) using jaccard/cosine similarity. This method(CoRank) combine TextRank and word sentence relationship. For that author linearly add TextRank and Word-sentence relationships. We used `alpha`(0 to 1) to incorporate TextRank and CoRank. If `alhpa`=1 then algorithm becomes TextRank and if `alpha`=0 then algorithm consider only word-sentence relationship. Finally this script rank the sentences and saved the ranked sentences into a csv file in folder summary_csv.
+* merge_sentences.py script merge the sentences according to their rank saved in the csv file until the desired summary length is reached and saved it into the folder summary_generated.
+
+
 
 
 
